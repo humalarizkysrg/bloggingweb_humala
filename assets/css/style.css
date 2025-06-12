@@ -1,0 +1,129 @@
+/* Global Styles */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --text-color: #333;
+    --light-bg: #f8f9fa;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Navigation */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+/* Featured Posts */
+.featured-post {
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.featured-post:hover {
+    transform: scale(1.02);
+}
+
+.featured-post .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    padding: 20px;
+    color: white;
+}
+
+/* Post Cards */
+.post-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.post-card .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+    border-color: #2980b9;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 3rem 0;
+}
+
+.social-links a {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--secondary-color) !important;
+}
+
+/* Forms */
+.form-control:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+}
+
+/* Post Content */
+.post-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.post-header {
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.post-header .overlay {
+    background: rgba(0,0,0,0.6);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .featured-post {
+        height: 300px;
+    }
+    
+    .post-header {
+        height: 300px;
+    }
+} 
