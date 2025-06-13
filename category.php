@@ -55,6 +55,9 @@ $posts = $stmt->fetchAll();
                     <li class="nav-item">
                         <a class="nav-link" href="add_article.php">Tambah Artikel</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="manage_categories.php">Kelola Kategori</a>
+                    </li>
                     <?php endif; ?>
                     <li class="nav-item">
                         <a class="nav-link" href="about.php">Tentang</a>

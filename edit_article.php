@@ -73,6 +73,45 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <a class="navbar-brand" href="index.php">
             <img src="assets/images/logo.png" alt="Humala News Logo" height="30" class="me-2">Humala News
         </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.php">Beranda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="categories.php">Kategori</a>
+                </li>
+                <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin'): ?>
+                <li class="nav-item">
+                    <a class="nav-link" href="add_article.php">Tambah Artikel</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="manage_categories.php">Kelola Kategori</a>
+                </li>
+                <?php endif; ?>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.php">Tentang</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.php">Kontak</a>
+                </li>
+                <?php if (isset($_SESSION['username'])): ?>
+                <li class="nav-item">
+                    <span class="nav-link disabled">Halo, <?php echo htmlspecialchars($_SESSION['username']); ?> (<?php echo $_SESSION['role']; ?>)</span>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="logout.php">Logout</a>
+                </li>
+                <?php else: ?>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.php">Login</a>
+                </li>
+                <?php endif; ?>
+            </ul>
+        </div>
     </div>
 </nav>
 <div class="container my-5">
