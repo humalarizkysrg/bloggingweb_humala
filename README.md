@@ -1,5 +1,5 @@
 # bloggingweb_humala
 
-LOGIN ADMIN
+LOGIN UNTUK ADMIN
 USERNAME : admin
 PASSWORD : admin123
